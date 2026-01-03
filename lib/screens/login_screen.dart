@@ -96,9 +96,10 @@ class _LoginScreenState extends State<LoginScreen> {
                                   child: MaterialButton(
                                     onPressed: () {
                                       if (_keyL.currentState!.validate()) {
-                                        Navigator.pushNamed(
+                                        Navigator.pushNamedAndRemoveUntil(
                                           context,
                                           HomePage.id,
+                                          (route) => false,
                                         );
                                       }
                                     },
